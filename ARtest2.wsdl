@@ -14,24 +14,6 @@ This XML file does not appear to have any style information associated with it. 
 <xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_detailandmed_v2.xsd"/>
 <!--  detailandmed_v3  -->
 <xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_detailandmed_v3.xsd"/>
-<!--  ettevotjaDokumentideLoetelu_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_ettevotjaDokumentideLoetelu_v1.xsd"/>
-<!--  ettevotjaMuudatusedTasuline_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_ettevotjaMuudatusedTasuline_v1.xsd"/>
-<!--  ettevotjaRekvisiididFail_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_ettevotjaRekvisiididFail_v1.xsd"/>
-<!--  ettevotjaRekvisiidid_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_ettevotjaRekvisiidid_v1.xsd"/>
-<!--  ettevotjaRekvisiidid_v2  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_ettevotjaRekvisiidid_v2.xsd"/>
-<!--  ettevottegaSeotudIsikud_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_ettevottegaSeotudIsikud_v1.xsd"/>
-<!--  esindus_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_esindus_v1.xsd"/>
-<!--  esindus_v2  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_esindus_v2.xsd"/>
-<!--  klassifikaatorid_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_klassifikaatorid_v1.xsd"/>
 <!--  lihtandmedTasuta_v1  -->
 <xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_lihtandmedTasuta_v1.xsd"/>
 <!--  lihtandmed_v1  -->
@@ -40,93 +22,7 @@ This XML file does not appear to have any style information associated with it. 
 <xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_lihtandmed_v2.xsd"/>
 <!--  lihtandmed_v3  -->
 <xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_lihtandmed_v3.xsd"/>
-<!--  majandusaastaAruanneteLoetelu_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_majandusaastaAruanneteLoetelu_v1.xsd"/>
-<!--  majandusaastaAruanneteKirjed_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_majandusaastaAruanneteKirjed_v1.xsd"/>
-<!--  seotudIsikuOtsing_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_seotudIsikuOtsing_v1.xsd"/>
-<!--  aruandeAuditeerimiseAndmed_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_aruandeAuditeerimiseAndmed_v1.xsd"/>
-<!--  aruandeMyygituluEMTAKjargi_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_aruandeMyygituluEMTAKjargi_v1.xsd"/>
-<!--  toimikuDokument_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_toimikuDokument_v1.xsd"/>
-<!--  toimikuDokument_v1 ja toimikuDokumendid_v1 ühised tüübid  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_toimiku_dokument_common.xsd"/>
-<!--  tegelikudKasusaajad_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_tegelikudKasusaajad_v1.xsd"/>
-<!--  kandedMaarused_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_kanded_maarused_v1.xsd"/>
-<!--  isikuMuudatused_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_isikuMuudatused_v1.xsd"/>
-<!--  STARTBLOCK:xroad_services  -->
-<!--  arikeelud_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_arikeelud_v1.xsd"/>
-<!--  ariregistriToimik_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_ariregistriToimik_v1.xsd"/>
-<!--  detailandmedEP_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_detailandmedEP_v1.xsd"/>
-<!--  erakondaKuuluvus_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_erakondaKuuluvus_v1.xsd"/>
-<!--  erakonnaNimekiri_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_erakonnaNimekiri_v1.xsd"/>
-<!--  esindusIseendaKohta_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_esindusIseendaKohta_v1.xsd"/>
-<!--  evportaalDigiteeriDokumendid_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_evportaalDigiteeriDokumendid_v1.xsd"/>
-<!--  evportaalDigiteeriToimik_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_evportaalDigiteeriToimik_v1.xsd"/>
-<!--  evportaalMargiKattetoimetatuks_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_evportaalMargiKattetoimetatuks_v1.xsd"/>
-<!--  ettevotjaMuudatusedTasutaTootukassa_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_ettevotjaMuudatusedTasutaTootukassa_v1.xsd"/>
-<!--  ettevotjaMuudatusedTasuta_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_ettevotjaMuudatusedTasuta_v1.xsd"/>
-<!--  EVKKanded_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_EVKKanded_v1.xsd"/>
-<!--  kyMenetlusinfo_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_kyMenetlusinfo_v1.xsd"/>
-<!--  maaruseDokument_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_maaruseDokument_v1.xsd"/>
-<!--  menetlusinfo_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_menetlusinfo_v1.xsd"/>
-<!--  mtaBilanss_v1, mtaBilanssFail_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_mtaBilanss_v1.xsd"/>
-<!--  mtaBilSisu_v1, mtaBilSisuFail_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_mtaBilSisu_v1.xsd"/>
-<!--  mtaEvSeisundid_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_mtaEvSeisundid_v1.xsd"/>
-<!--  mtaPortsTeenuseid  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_mtaparingud.xsd"/>
-<!--  edastaRiigiLoivuNdoue_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_edastaRiigiLoivuNoue_v1.xsd"/>
-<!--  napTasumiseLisamine_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_napTasumiseLisamine_v1.xsd"/>
-<!--  nimeSobivus_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_nimeSobivus_v1.xsd"/>
-<!--  rkoarr_asutused_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_rkoarr_asutused_v1.xsd"/>
-<!--  registrikaart_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_registrikaart_v1.xsd"/>
-<!--  sooritaKanne_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_sooritaKanne_v1.xsd"/>
-<!--  tapsustaAadress_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_tapsustaAadress_v1.xsd"/>
-<!--  toimikuDokumendid_v1  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_toimikuDokumendid_v1.xsd"/>
-<!--  transactionStatement  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_transactionStatement.xsd"/>
-<!--  Haigekassa teenused -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_haigekassa.xsd"/>
-<!--  xbrl teenused -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_xbrl.xsd"/>
-<!--  evapi teenused -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_evapi.xsd"/>
-<!--  kasusaajate kinnitamine  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_kinnitaKasusaajad_v1.xsd"/>
-<!--  EMTA krediitkaardimakse notify teenus  -->
-<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_cpgOrderNotify.xsd"/>
+
 <!--  ENDBLOCK:xroad_services  -->
 <!--  e-arve registri teenused  -->
 <xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_earve.xsd"/>
