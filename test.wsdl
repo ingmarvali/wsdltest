@@ -3,15 +3,38 @@ This XML file does not appear to have any style information associated with it. 
 <!--  Version: 0.10.4-live, tasuta, date 2021-07-28 10:52, by user ando  -->
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:swa="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xrd="http://x-road.eu/xsd/xroad.xsd" xmlns:xid="http://x-road.eu/xsd/identifiers" xmlns:ar="http://arireg.x-road.eu/producer/" name="ariregv6API" targetNamespace="http://arireg.x-road.eu/producer/">
 <wsdl:types>
-...
+<xsd:schema targetNamespace="http://arireg.x-road.eu/producer/" elementFormDefault="qualified">
+<xsd:import namespace="http://x-road.eu/xsd/xroad.xsd" schemaLocation="http://x-road.eu/xsd/xroad.xsd"/>
+<xsd:import namespace="http://ws-i.org/profiles/basic/1.1/xsd" schemaLocation="http://ws-i.org/profiles/basic/1.1/swaref.xsd"/>
+<!--  debugAdapter_v1  -->
+
+<!--  detailandmed_v1  -->
+<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_detailandmed_v1.xsd"/>
+<!--  detailandmed_v2  -->
+<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_detailandmed_v2.xsd"/>
+<!--  detailandmed_v3  -->
+<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_detailandmed_v3.xsd"/>
+
+<!--  lihtandmedTasuta_v1  -->
+<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_lihtandmedTasuta_v1.xsd"/>
+<!--  lihtandmed_v1  -->
+<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_lihtandmed_v1.xsd"/>
+<!--  lihtandmed_v2  -->
+<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_lihtandmed_v2.xsd"/>
+<!--  lihtandmed_v3  -->
+<xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_lihtandmed_v3.xsd"/>
 </wsdl:types>
 <!--  Messages for ARIREG  -->
 <wsdl:message name="XroadHeaderMsg">
-...
-
+<wsdl:part name="client" element="xrd:client"/>
+<wsdl:part name="service" element="xrd:service"/>
+<wsdl:part name="id" element="xrd:id"/>
+<wsdl:part name="userId" element="xrd:userId"/>
+<wsdl:part name="protocolVersion" element="xrd:protocolVersion"/>
 </wsdl:message>
+
 <wsdl:message name="detailandmed_v1">
-...
+<wsdl:part name="detailandmed_v1" element="ar:detailandmed_v1"/>
 </wsdl:message>
 <wsdl:message name="detailandmed_v1Response">
 <wsdl:part name="detailandmed_v1Response" element="ar:detailandmed_v1Response"/>
