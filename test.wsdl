@@ -23,8 +23,13 @@ This XML file does not appear to have any style information associated with it. 
 <xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_lihtandmed_v2.xsd"/>
 <!--  lihtandmed_v3  -->
 <xsd:include schemaLocation="https://www2.rik.ee/schemas/xtee6/arireg/live/xroad6_lihtandmed_v3.xsd"/>
+</xsd:schema>
 </wsdl:types>
+
 <!--  Messages for ARIREG  -->
+
+
+
 <wsdl:message name="XroadHeaderMsg">
 <wsdl:part name="client" element="xrd:client"/>
 <wsdl:part name="service" element="xrd:service"/>
@@ -141,7 +146,7 @@ This XML file does not appear to have any style information associated with it. 
 <wsdl:input name="detailandmedEP_v1" message="ar:detailandmedEP_v1"/>
 <wsdl:output name="detailandmedEP_v1Response" message="ar:detailandmedEP_v1Response"/>
 </wsdl:operation>
-
+</wsdl:portType>
 <!--  Binding for ARIREG - document/literal wrapped, SOAP over HTTP  -->
 <wsdl:binding name="AriregXtee" type="ar:AriregXtee">
 <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
