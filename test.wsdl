@@ -1,4 +1,3 @@
-This XML file does not appear to have any style information associated with it. The document tree is shown below.
 <!--  WSDL for arireg X-road v6  -->
 <!--  Version: 0.10.4-live, tasuta, date 2021-07-28 10:52, by user ando  -->
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:swa="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xrd="http://x-road.eu/xsd/xroad.xsd" xmlns:xid="http://x-road.eu/xsd/identifiers" xmlns:ar="http://arireg.x-road.eu/producer/" name="ariregv6API" targetNamespace="http://arireg.x-road.eu/producer/">
