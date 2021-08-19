@@ -147,6 +147,8 @@ This XML file does not appear to have any style information associated with it. 
 <wsdl:output name="detailandmedEP_v1Response" message="ar:detailandmedEP_v1Response"/>
 </wsdl:operation>
 </wsdl:portType>
+
+
 <!--  Binding for ARIREG - document/literal wrapped, SOAP over HTTP  -->
 <wsdl:binding name="AriregXtee" type="ar:AriregXtee">
 <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -302,22 +304,12 @@ This XML file does not appear to have any style information associated with it. 
 <soap:header use="literal" message="ar:XroadHeaderMsg" part="userId"/>
 <soap:header use="literal" message="ar:XroadHeaderMsg" part="protocolVersion"/>
 </mime:part>
-</mime:multipartRelated>
-</wsdl:output>
-</wsdl:operation>
-
-
-
-
-<soap:body use="literal"/>
-<soap:header use="literal" message="ar:XroadHeaderMsg" part="client"/>
-<soap:header use="literal" message="ar:XroadHeaderMsg" part="service"/>
-<soap:header use="literal" message="ar:XroadHeaderMsg" part="id"/>
-<soap:header use="literal" message="ar:XroadHeaderMsg" part="userId"/>
-<soap:header use="literal" message="ar:XroadHeaderMsg" part="protocolVersion"/>
-</wsdl:output>
-</wsdl:operation>
+  </mime:multipartRelated>
+  </wsdl:output>
+ </wsdl:operation>
 </wsdl:binding>
+
+
 <!--  Endpoint for ARIREG  -->
 <wsdl:service name="arireg">
 <wsdl:port binding="ar:AriregXtee" name="AriregXtee">
