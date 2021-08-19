@@ -308,18 +308,7 @@ This XML file does not appear to have any style information associated with it. 
 
 
 
-<wsdl:operation name="earveRegistriParing_v1">
-<soap:operation soapAction="" style="document"/>
-<xrd:version>v1</xrd:version>
-<wsdl:input name="earveRegistriParing_v1">
-<soap:body use="literal"/>
-<soap:header use="literal" message="ar:XroadHeaderMsg" part="client"/>
-<soap:header use="literal" message="ar:XroadHeaderMsg" part="service"/>
-<soap:header use="literal" message="ar:XroadHeaderMsg" part="id"/>
-<soap:header use="literal" message="ar:XroadHeaderMsg" part="userId"/>
-<soap:header use="literal" message="ar:XroadHeaderMsg" part="protocolVersion"/>
-</wsdl:input>
-<wsdl:output name="earveRegistriParing_v1Response">
+
 <soap:body use="literal"/>
 <soap:header use="literal" message="ar:XroadHeaderMsg" part="client"/>
 <soap:header use="literal" message="ar:XroadHeaderMsg" part="service"/>
