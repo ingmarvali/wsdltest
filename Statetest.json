@@ -10,7 +10,7 @@
    },
    "servers":[
       {
-         "url":"https://your-security-server.com"
+         "url":"http://proxyserver/cgi-bin/consumer_proxy"
       }
    ],
    "tags":[
