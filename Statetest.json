@@ -439,6 +439,25 @@
       }
    },
    "components":{
+          "securitySchemes" : {
+      "apiKey" : {
+        "type" : "apiKey",
+        "name" : "Authorization",
+        "in" : "header"
+      }
+    },
+    "parameters" : {
+      "X-Road-Client" : {
+        "in" : "header",
+        "name" : "X-Road-Client",
+        "example" : "eGovStack/GOV/90000009/digitalregistries",
+        "description" : "Format is: INSTANCE/CLASS/MEMBER/SUBSYSTEM",
+        "schema" : {
+          "type" : "string"
+        },
+        "required" : true
+      }
+    },
       "schemas":{
          "NotFoundExceptionResponse":{
             "title":"Not Found Exception Message",
