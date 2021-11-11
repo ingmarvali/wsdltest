@@ -32,8 +32,9 @@
             "summary":"Get permission status for list of StateOS users",
             "description":"Service returns a list of StateOS user contacts the provider has permission to send that type of messages. Input for the service is a list of phone numbers, e-mails or personal codes.New providers will be added to users within 24 hours after adding the provider to the system. For end users it is an Opt-Out solution where all providers are allowed on registration, but users can manage permissions for providers based on message type",
             "operationId":"getConsentAcceptedUsersForProviderByPersonalCode",
-            "parameters":[
-               {
+            "parameters":[{
+          "$ref" : "#/components/parameters/X-Road-Client"
+        },      {
                   "name":"messageType",
                   "in":"path",
                   "required":true,
@@ -108,7 +109,9 @@
             "summary":"Send mass message to all StateOS users",
             "description":"A message will be sent to all StateOS users who have not removed the permissions from the provider to send messages of that type",
             "operationId":"createMassNotification",
-            "parameters":[
+            "parameters":[{
+          "$ref" : "#/components/parameters/X-Road-Client"
+        },
                {
                   "name":"messageType",
                   "in":"path",
@@ -184,7 +187,9 @@
             "summary":"Send message to provided StateOS users",
             "description":"A message will be sent to the list of StateOS users who have not removed the permissions from the provider to send messages of that type",
             "operationId":"createContactTestMassNotification",
-            "parameters":[
+            "parameters":[{
+          "$ref" : "#/components/parameters/X-Road-Client"
+        },
                {
                   "name":"messageType",
                   "in":"path",
@@ -273,7 +278,9 @@
             "summary":"Send a message to a single StateOS user",
             "description":"A message will be sent to an idividual StateOS user if the user has not removed the permissions from the provider to send messages of that type",
             "operationId":"createProviderNotification",
-            "parameters":[
+            "parameters":[{
+          "$ref" : "#/components/parameters/X-Road-Client"
+        },
                {
                   "name":"messageType",
                   "in":"path",
@@ -370,7 +377,9 @@
             "summary":"Get permission status for a single StateOS user",
             "description":"Service checks if provider has the permission to send messages to StateOS user according to the provided phone number, e-mail or personalcode. New providers will be added to users within 24 hours after adding the provider to the system. For end users it is an Opt-Out solution where all providers are allowed on registration, but users can manage permissions for providers based on message type",
             "operationId":"getProviderConsentStatus",
-            "parameters":[
+            "parameters":[{
+          "$ref" : "#/components/parameters/X-Road-Client"
+        },
                {
                   "name":"contactType",
                   "in":"path",
@@ -450,7 +459,7 @@
       "X-Road-Client" : {
         "in" : "header",
         "name" : "X-Road-Client",
-        "example" : "eGovStack/GOV/90000009/digitalregistries",
+        "example" : "ee-test/GOV/70000310/eregistrations",
         "description" : "Format is: INSTANCE/CLASS/MEMBER/SUBSYSTEM",
         "schema" : {
           "type" : "string"
