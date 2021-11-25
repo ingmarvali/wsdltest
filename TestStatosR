@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "http://turvaserver"
+      "url": "https://turvaserver"
     }
   ],
   "tags": [
