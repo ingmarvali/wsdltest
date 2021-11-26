@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "https://proxyserver/cgi-bin/consumer_proxy"
+      "url": "https://proxyserver:4439/cgi-bin/consumer_proxy"
     }
   ],
   "tags": [
