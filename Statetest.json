@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "http://proxyserver:8089/cgi-bin/consumer_proxy"
+      "url": "http://proxyserver/r1/roksnet-dev/COM/12998179/notification/notification-provider"
     }
   ],
   "tags": [
