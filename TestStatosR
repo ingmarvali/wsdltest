@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "https://turvaserver"
+      "url": "https://turvaserver/r1/roksnet-dev/COM/12998179/notification/notification-provider"
     }
   ],
   "tags": [
