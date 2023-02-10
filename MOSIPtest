@@ -20,8 +20,8 @@
   },
   "servers": [
     {
-      "url": "https://api.qa4.mosip.net/v1/idp",
-      "description": "qa4"
+      "url": "https://api.collab.mosip.net/v1/idp",
+      "description": "collab"
     }
   ],
   "paths": {
