@@ -20,7 +20,7 @@
   },
   "servers": [
     {
-      "url": "https://api.collab.mosip.net/v1/idp",
+      "url": "https://idp.collab.mosip.net/v1/idp",
       "description": "collab"
     }
   ],
