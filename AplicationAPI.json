@@ -1,0 +1,506 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "Registration BB API descriptions",
+		"description": "API from Registration BB",
+		"termsOfService": "#",
+		"contact": {
+			"email": "ingmar.vali@gmail.com"
+		},
+		"license": {
+			"name": "Apache 2.0",
+			"url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+		},
+		"version": "0.0.1"
+	},
+	"servers": [{
+		"url": "http://ss2.egovstack.net/r1/eGovStack/COM/11222456/RegistrationBB/creg/",
+		"description": "Information Mediator BB Security server"
+	}],
+
+	"paths": {
+
+		"/api/task": {
+			"get": {
+				"tags": ["applicant-task"],
+				"summary": "Retrieve all tasks by applicant user ID",
+				"description": "Returns task list",
+				"operationId": "getTasks",
+				"parameters": [{
+						"name": "processInstanceId",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"name": "applicantId",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"name": "firstResult",
+						"in": "query",
+						"description": "Pagination of results. Specifies the index of the first result to return.",
+						"schema": {
+							"type": "integer"
+						}
+					}, {
+						"name": "maxResult",
+						"in": "query",
+						"description": "Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left.",
+						"schema": {
+							"type": "integer"
+						}
+					}, {
+						"name": "sortBy",
+						"in": "query",
+						"description": "Sort the results lexicographically by a given criterion. Valid values are instanceId, caseInstanceId, dueDate, executionId, caseExecutionId,assignee, created, description, id, name, nameCaseInsensitive and priority. Must be used in conjunction with the sortOrder parameter.",
+						"schema": {
+							"type": "string"
+						}
+					}, {
+						"name": "sortOrder",
+						"in": "query",
+						"description": "Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter.",
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/ApplicantTaskResponse"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+
+
+
+
+		"/api/task/{id}": {
+			"get": {
+				"tags": ["applicant-task-controller"],
+				"summary": "Get task by  id",
+				"description": "Returns list of tasks by  task id",
+				"operationId": "getTaskById",
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"schema": {
+						"type": "string"
+					}
+				}],
+				"responses": {
+					"200": {
+						"description": "Returns task by id",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/SignableDataUserTaskResponse"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "Task hasn't found",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/SystemErrorDto"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/task/lightweight": {
+			"get": {
+				"tags": ["applicant-task"],
+				"summary": "Retrieve all tasks",
+				"description": "Returns lightweight task list",
+				"operationId": "getLightweightTasks",
+				"parameters": [{
+					"name": "rootProcessInstanceId",
+					"in": "query",
+					"required": false,
+					"schema": {
+						"type": "string"
+					}
+				}, 
+				
+					{
+						"name": "applicantId",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+				{
+					"name": "firstResult",
+					"in": "query",
+					"description": "Pagination of results. Specifies the index of the first result to return.",
+					"schema": {
+						"type": "integer"
+					}
+				}, {
+					"name": "maxResult",
+					"in": "query",
+					"description": "Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left.",
+					"schema": {
+						"type": "integer"
+					}
+				}, {
+					"name": "sortBy",
+					"in": "query",
+					"description": "Sort the results lexicographically by a given criterion. Valid values are instanceId, caseInstanceId, dueDate, executionId, caseExecutionId,assignee, created, description, id, name, nameCaseInsensitive and priority. Must be used in conjunction with the sortOrder parameter.",
+					"schema": {
+						"type": "string"
+					}
+				}, {
+					"name": "sortOrder",
+					"in": "query",
+					"description": "Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter.",
+					"schema": {
+						"type": "string"
+					}
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/ApplicantTaskLightweightResponse"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/task/count": {
+			"get": {
+				"tags": ["applicant-task-controller"],
+				"summary": "Retrieve count of all tasks",
+				"description": "Returns tasks count",
+				"operationId": "countTasks",
+				"parameters": [{
+					"name": "rootProcessInstanceId",
+					"in": "query",
+					"required": false,
+					"schema": {
+						"type": "string"
+					}
+				}, 
+				
+					{
+						"name": "applicantId",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+			  ],
+			
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"*/*": {
+								"schema": {
+									"$ref": "#/components/schemas/CountResponse"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"FormDataDto": {
+				"type": "object",
+				"properties": {
+					"data": {
+						"type": "object",
+						"additionalProperties": {
+							"type": "object"
+						}
+					},
+					"decision": {
+						"type": "string"
+					},
+					"x-access-token": {
+						"type": "string"
+					}
+				}
+			},
+			"SystemErrorDto": {
+				"type": "object",
+				"properties": {
+					"traceId": {
+						"type": "string"
+					},
+					"code": {
+						"type": "string"
+					},
+					"message": {
+						"type": "string"
+					},
+					"localizedMessage": {
+						"type": "string"
+					}
+				}
+			},
+			"ErrorDetailDto": {
+				"type": "object",
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"field": {
+						"type": "string"
+					},
+					"value": {
+						"type": "string"
+					}
+				}
+			},
+			"ErrorsListDto": {
+				"type": "object",
+				"properties": {
+					"errors": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/ErrorDetailDto"
+						}
+					}
+				}
+			},
+			"ValidationErrorDto": {
+				"type": "object",
+				"properties": {
+					"traceId": {
+						"type": "string"
+					},
+					"code": {
+						"type": "string"
+					},
+					"message": {
+						"type": "string"
+					},
+					"details": {
+						"$ref": "#/components/schemas/ErrorsListDto"
+					}
+				}
+			},
+			"CompletedTaskResponse": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"processInstanceId": {
+						"type": "string"
+					},
+					"rootProcessInstanceId": {
+						"type": "string"
+					},
+					"rootProcessInstanceEnded": {
+						"type": "boolean"
+					},
+					"variables": {
+						"type": "object",
+						"additionalProperties": {
+							"$ref": "#/components/schemas/VariableValueResponse"
+						}
+					}
+				}
+			},
+			"VariableValueResponse": {
+				"type": "object",
+				"properties": {
+					"type": {
+						"type": "string"
+					},
+					"value": {
+						"type": "object"
+					},
+					"valueInfo": {
+						"type": "object",
+						"additionalProperties": {
+							"type": "object"
+						}
+					}
+				}
+			},
+			"ApplicantTaskResponse": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"taskDefinitionKey": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"assignee": {
+						"type": "string"
+					},
+					"status": {
+						"type": "string"
+					},
+
+					"applicantId": {
+						"type": "string"
+					},
+
+
+
+					"created": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"registered": {
+						"type": "string",
+						"format": "date-time"
+					},
+
+					"description": {
+						"type": "string"
+					},
+					"processDefinitionName": {
+						"type": "string"
+					},
+					"processInstanceId": {
+						"type": "string"
+					},
+					"processDefinitionId": {
+						"type": "string"
+					},
+					"formKey": {
+						"type": "string"
+					},
+					"suspended": {
+						"type": "boolean"
+					},
+					"businessKey": {
+						"type": "string"
+					},
+					"Results": {
+						"type": "string"
+					}
+
+				}
+			},
+			"SignableDataUserTaskResponse": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"taskDefinitionKey": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"assignee": {
+						"type": "string"
+					},
+					"created": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"description": {
+						"type": "string"
+					},
+					"processInstanceId": {
+						"type": "string"
+					},
+					"processDefinitionId": {
+						"type": "string"
+					},
+					"processDefinitionName": {
+						"type": "string"
+					},
+					"formKey": {
+						"type": "string"
+					},
+					"suspended": {
+						"type": "boolean"
+					},
+					"formVariables": {
+						"type": "object",
+						"additionalProperties": {
+							"type": "object"
+						}
+					},
+					"decisionValidationPack": {
+						"uniqueItems": true,
+						"type": "array",
+						"items": {
+							"type": "string",
+							"enum": ["PENDING", "APPROVE", "SEND BACK FOR CORRECTION", "REJECT"]
+						}
+					},
+					"data": {
+						"type": "object",
+						"additionalProperties": {
+							"type": "object"
+						}
+					},
+					"esign": {
+						"type": "boolean"
+					}
+				}
+			},
+			"ApplicantTaskLightweightResponse": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"assignee": {
+						"type": "string"
+					}
+				}
+			},
+			"CountResponse": {
+				"type": "object",
+				"properties": {
+					"count": {
+						"type": "integer",
+						"format": "int64"
+					}
+				}
+			}
+		}
+	}
+}
