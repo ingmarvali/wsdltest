@@ -1,0 +1,250 @@
+{
+	"openapi": "3.0.1",
+	"info": {
+		"title": "Banned company names",
+		"description": "",
+		"version": "1.1"
+	},
+	"servers": [{
+		"url": " https://54.86.135.117/restapi/"
+	}],
+	"tags": [{
+		"name": "Data",
+		"description": ""
+	}],
+	"paths": {
+		"/data/ban/1.1": {
+			"get": {
+				"tags": ["Data"],
+				"operationId": "GDB-BAN(1.1)-list",
+				"summary": "GDB-BAN(1.1)-list",
+				"parameters": [{
+					"name": "search",
+					"in": "query",
+					"required": false,
+					"schema": {
+						"type": "string"
+					}
+				}, {
+					"name": "filter",
+					"in": "query",
+					"required": false,
+					"schema": {
+						"type": "string"
+					}
+				}, {
+					"name": "ordering",
+					"in": "query",
+					"required": false,
+					"schema": {
+						"type": "string"
+					}
+				}, {
+					"name": "page",
+					"in": "query",
+					"required": false,
+					"schema": {
+						"type": "integer"
+					}
+				}, {
+					"name": "page_size",
+					"in": "query",
+					"required": false,
+					"schema": {
+						"type": "integer"
+					}
+				}, {
+					"name": "query.ID",
+					"in": "query",
+					"required": false,
+					"schema": {
+						"type": "string",
+						"readOnly": true,
+						"x-id": 1
+					}
+				}, {
+					"name": "query.Word",
+					"in": "query",
+					"required": false,
+					"schema": {
+						"type": "string",
+						"x-id": 2
+					}
+				}, {
+					"name": "query.Language",
+					"in": "query",
+					"required": false,
+					"schema": {
+						"type": "string",
+						"x-id": 5
+					}
+				}, {
+					"name": "query.Comment",
+					"in": "query",
+					"required": false,
+					"schema": {
+						"type": "string",
+						"x-id": 3
+					}
+				}, {
+					"name": "query.User",
+					"in": "query",
+					"required": false,
+					"schema": {
+						"type": "string",
+						"x-id": 4
+					}
+				}, {
+					"$ref": "#/components/parameters/HeaderXRoadClient"
+				}],
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"count": {
+											"type": "integer"
+										},
+										"next": {
+											"type": "string",
+											"format": "uri",
+											"x-nullable": true
+										},
+										"previous": {
+											"type": "string",
+											"format": "uri",
+											"x-nullable": true
+										},
+										"results": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"receive": {
+														"type": "object",
+														"properties": {
+															"uuid": {
+																"type": "string",
+																"format": "uuid",
+																"readOnly": true
+															},
+															"created_at": {
+																"type": "string",
+																"format": "date-time",
+																"readOnly": true
+															},
+															"modified_at": {
+																"type": "string",
+																"format": "date-time",
+																"readOnly": true
+															},
+															"content": {
+																"type": "object",
+																"properties": {
+																	"ID": {
+																		"type": "string",
+																		"x-id": 1
+																	},
+																	"Word": {
+																		"type": "string",
+																		"x-id": 2
+																	},
+																	"Language": {
+																		"type": "string",
+																		"x-id": 5
+																	},
+																	"Comment": {
+																		"type": "string",
+																		"x-id": 3
+																	},
+																	"User": {
+																		"type": "string",
+																		"x-id": 4
+																	}
+																},
+																"required": ["ID"]
+															}
+														},
+														"required": ["uuid", "created_at", "modified_at", "content"]
+													}
+												},
+												"required": ["receive"]
+											}
+										}
+									},
+									"required": ["count", "results"]
+								}
+							}
+						}
+					}
+				},
+				"security": [{
+					"apiKey": []
+				}]
+			}
+		}
+	},
+	"components": {
+		"securitySchemes": {
+			"apiKey": {
+				"type": "apiKey",
+				"name": "Authorization",
+				"in": "header"
+			}
+		},
+		"schemas": {
+			"FieldFileType": {
+				"anyOf": [{
+					"type": "object",
+					"properties": {
+						"url": {
+							"type": "string"
+						},
+						"originalName": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string"
+						}
+					},
+					"required": ["url", "originalName", "type"]
+				}, {
+					"type": "object",
+					"properties": {
+						"$documentId": {
+							"type": "number"
+						}
+					},
+					"required": ["$documentId"]
+				}]
+			},
+			"FieldCatalogType": {
+				"type": "object",
+				"properties": {
+					"key": {
+						"type": "string"
+					},
+					"value": {
+						"type": "string"
+					}
+				},
+				"required": ["key", "value"]
+			}
+		},
+		"parameters": {
+			"HeaderXRoadClient": {
+				"in": "header",
+				"name": "X-Road-Client",
+				"example": "egovstack/GOV/7002/Registration",
+				"description": "Format is: INSTANCE/CLASS/MEMBER/SUBSYSTEM",
+				"schema": {
+					"type": "string"
+				},
+				"required": true
+			}
+		}
+	}
+}
