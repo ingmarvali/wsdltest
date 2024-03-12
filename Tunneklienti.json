@@ -1,0 +1,71 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "KYC API",
+    "description": "KYC API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://KYC"
+    }
+  ],
+  "paths": {
+    "/kyc_sendBusinessRequest_v1": {
+      "post": {
+        "summary": "POST kyc_sendBusinessRequest_v1",
+        "operationId": "execute",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KycRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KycResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "KycRequest": {
+        "type": "object",
+        "properties": {
+          "businessUnitCode": {
+            "type": "string"
+          },
+          "callerIdCode": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "businessUnitCode",
+          "callerIdCode"
+        ]
+      },
+      "KycResponse": {
+        "type": "object",
+        "properties": {
+          "reqUuid": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      }
+    }
+  }
+}
